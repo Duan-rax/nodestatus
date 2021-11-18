@@ -8,6 +8,7 @@ import {
   setOrder
 } from '../model/server';
 import { createRes } from '../lib/utils';
+import { readEvents } from '../model/event';
 
 async function handleRequest<T>(ctx: Context, handler: Promise<T>): Promise<void> {
   try {
@@ -74,10 +75,15 @@ const modifyOrder: Middleware = async ctx => {
   await handleRequest(ctx, setOrder(order));
 };
 
+const queryEvents: Middleware = async ctx => {
+  await handleRequest(ctx, readEvents());
+};
+
 export {
   listServers,
   setServer,
   addServer,
   delServer,
-  modifyOrder
+  modifyOrder,
+  queryEvents
 };

@@ -19,14 +19,9 @@ const menus = [
     link: '/management'
   },
   {
-    title: 'Statistics',
-    icon: <PieChartFilled />,
-    link: '/statistics'
-  },
-  {
-    title: 'Alert',
+    title: 'Events',
     icon: <AlertFilled />,
-    link: '/alert'
+    link: '/events'
   }
 ];
 
