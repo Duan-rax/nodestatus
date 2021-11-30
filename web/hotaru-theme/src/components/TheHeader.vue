@@ -42,7 +42,7 @@ export default defineComponent({
 }
 
 #header::after {
-  content: 'Pixiv: 86597206';
+  content: 'Aman';
   position: absolute;
   right: 15px;
   bottom: 0;
